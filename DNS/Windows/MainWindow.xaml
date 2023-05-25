@@ -1,0 +1,343 @@
+﻿<Window x:Class="DNS.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DNS"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        ResizeMode="CanResize"
+        Title="Gray's shop" Height="1080" Width="1920">
+    <Grid Background="#e6e6e6" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.2*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        
+        <Border
+            Grid.Column="0"
+            Grid.Row="0"
+            Grid.ColumnSpan="2" Background="White">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.2*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Button
+                    x:Name="btnAllProduct"
+                    Height="80"
+                    Width="400"
+                    VerticalAlignment="Center"
+                    Content="Gray's shop"
+                    FontSize="50"
+                    HorizontalAlignment="Center"
+                    Foreground="White" 
+                    FontFamily="Segoe UI Semibold" 
+                    Background="{x:Null}" 
+                    BorderBrush="{x:Null}"
+                    Style="{StaticResource MyButtonStyleCategory}" 
+                    Click="btnAllProduct_Click"
+                    />
+            </Grid>
+        </Border>
+
+        <Border
+            Grid.Column="0"
+            Grid.Row="1"
+            Background="White"
+            CornerRadius="20"
+            Height="840"
+            Width="400" Margin="0 10 0 0"
+            >
+            <Grid
+                Margin="5 0 5 10">
+
+                <StackPanel 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Width="370">
+                    <Button 
+                        Height="55"
+                        Grid.Column="1"
+                        x:Name="btnAppliances"
+                        Background="{x:Null}"  
+                        BorderBrush="{x:Null}"
+                        Margin="0 10"
+                        Click="btnAppliances_Click"
+                        Style="{StaticResource MyButtonStyleCategory}"
+                        >
+                        <WrapPanel Width="330">
+                            <Image Source="/Images/vector.png" Height="35" Width="35"/>
+                            <TextBlock
+                                FontSize="22"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="Бытовая техника"
+                                Margin="10" 
+                                Foreground="White" 
+                                Background="{x:Null}" 
+                                >
+
+                            </TextBlock>
+                        </WrapPanel>
+                    </Button>
+                    <Button 
+                        Height="55"
+                        Grid.Column="1"
+                        x:Name="btnBeautyAndHealth"
+                        Background="{x:Null}"  
+                        BorderBrush="{x:Null}"
+                        Margin="0 10"
+                        Click="btnBeautyAndHealth_Click"
+                        Style="{StaticResource MyButtonStyleCategory}"
+                        >
+                        <WrapPanel Width="330">
+                            <Image Source="/Images/fen.png" Height="35" Width="35"/>
+                            <TextBlock
+                                FontSize="22"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="Красота и здоровье"
+                                Margin="10" 
+                                Foreground="White" 
+                                Background="{x:Null}" 
+                                >
+                            </TextBlock>
+                        </WrapPanel>
+                    </Button>
+                    <Button 
+                        Height="55"
+                        Grid.Column="1"
+                        x:Name="bntSmartphones"
+                        Background="{x:Null}"  
+                        BorderBrush="{x:Null}"
+                        Margin="0 10"
+                        Click="btnSmartphones_Click"
+                        Style="{StaticResource MyButtonStyleCategory}"
+                        >
+                        <WrapPanel Width="330">
+                            <Image Source="/Images/smart.png" Height="35" Width="35"/>
+                            <TextBlock
+                                FontSize="22"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="Смартфоны и фототехника"
+                                Margin="10" 
+                                Foreground="White" 
+                                Background="{x:Null}" 
+                                >
+                            </TextBlock>
+                        </WrapPanel>
+                    </Button>
+                    <Button 
+                        Height="55"
+                        Grid.Column="1"
+                        x:Name="btnTV"
+                        Background="{x:Null}"  
+                        BorderBrush="{x:Null}"
+                        Margin="0 10"
+                        Click="btnTV_Click"
+                        Style="{StaticResource MyButtonStyleCategory}"
+                        >
+                        <WrapPanel Width="330">
+                            <Image Source="/Images/tv.png" Height="35" Width="35"/>
+                            <TextBlock
+                                FontSize="22"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="ТВ, консоли и аудио"
+                                Margin="10" 
+                                Foreground="White" 
+                                Background="{x:Null}" 
+                                >
+                            </TextBlock>
+                        </WrapPanel>
+                    </Button>
+                    <Button 
+                        Height="55"
+                        Grid.Column="1"
+                        x:Name="btnPCs"
+                        Background="{x:Null}"  
+                        BorderBrush="{x:Null}"
+                        Margin="0 10"
+                        Click="btnPCs_Click"
+                        Style="{StaticResource MyButtonStyleCategory}"
+                        >
+                        <WrapPanel Width="330">
+                            <Image Source="/Images/pc.png" Height="35" Width="35"/>
+                            <TextBlock
+                                FontSize="22"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="ПК, ноутбуки, периферия"
+                                Margin="10" 
+                                Foreground="White" 
+                                Background="{x:Null}" 
+                                >
+                            </TextBlock>
+                        </WrapPanel>
+                    </Button>
+                    <Button 
+                        Height="55"
+                        Grid.Column="1"
+                        x:Name="btnPCAccessories"
+                        Background="{x:Null}"  
+                        BorderBrush="{x:Null}"
+                        Margin="0 10"
+                        Click="btnPCAccessories_Click"
+                        Style="{StaticResource MyButtonStyleCategory}"
+                        >
+                        <WrapPanel Width="330">
+                            <Image Source="/Images/proc.png" Height="35" Width="35"/>
+                            <TextBlock
+                                FontSize="22"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="Комплектующие для ПК"
+                                Margin="10" 
+                                Foreground="White" 
+                                Background="{x:Null}" 
+                                >
+                            </TextBlock>
+                        </WrapPanel>
+                    </Button>
+                    <Button 
+                        Height="55"
+                        Grid.Column="1"
+                        x:Name="btnOfficeAndFurniture"
+                        Background="{x:Null}"  
+                        BorderBrush="{x:Null}"
+                        Margin="0 10"
+                        Click="btnOfficeAndFurniture_Click"
+                        Style="{StaticResource MyButtonStyleCategory}"
+                        >
+                        <WrapPanel Width="330">
+                            <Image Source="/Images/print.png" Height="35" Width="35"/>
+                            <TextBlock
+                                FontSize="22"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="Офис и мебель"
+                                Margin="10" 
+                                Foreground="White" 
+                                Background="{x:Null}" 
+                                >
+                            </TextBlock>
+                        </WrapPanel>
+                    </Button>
+                    <Button 
+                        Height="55"
+                        Grid.Column="1"
+                        x:Name="btnNetworkEquipment"
+                        Background="{x:Null}"  
+                        BorderBrush="{x:Null}"
+                        Margin="0 10"
+                        Click="btnNetworkEquipment_Click"
+                        Style="{StaticResource MyButtonStyleCategory}"
+                        >
+                        <WrapPanel Width="330">
+                            <Image Source="/Images/wf.png" Height="35" Width="35"/>
+                            <TextBlock
+                                FontSize="22"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="Сетевое оборудование"
+                                Margin="10" 
+                                Foreground="White" 
+                                Background="{x:Null}" 
+                                >
+                            </TextBlock>
+                        </WrapPanel>
+                    </Button>
+                    <Button 
+                        Height="55"
+                        Grid.Column="1"
+                        x:Name="btnTools"
+                        Background="{x:Null}"  
+                        BorderBrush="{x:Null}"
+                        Margin="0 10"
+                        Click="btnTools_Click"
+                        Style="{StaticResource MyButtonStyleCategory}"
+                        >
+                        <WrapPanel Width="330">
+                            <Image Source="/Images/tool.png" Height="35" Width="35"/>
+                            <TextBlock
+                                FontSize="22"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="Инструмент и стройка"
+                                Margin="10" 
+                                Foreground="White" 
+                                Background="{x:Null}" 
+                                >
+                            </TextBlock>
+                        </WrapPanel>
+                    </Button>
+                    <Button 
+                        Height="55"
+                        Grid.Column="1"
+                        x:Name="btnHome"
+                        Background="{x:Null}"  
+                        BorderBrush="{x:Null}"
+                        Click="btnHome_Click"
+                        Margin="0 10"
+                        Style="{StaticResource MyButtonStyleCategory}"
+                        >
+                        <WrapPanel Width="330">
+                            <Image Source="/Images/house.png" Height="35" Width="35"/>
+                            <TextBlock
+                                FontSize="22"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="Дом, декор и посуда"
+                                Margin="10" 
+                                Foreground="White" 
+                                Background="{x:Null}" 
+                                >
+                            </TextBlock>
+                        </WrapPanel>
+                    </Button>
+                    <Button 
+                        Height="55"
+                        Grid.Column="1"
+                        x:Name="tbnAccessories"
+                        Background="{x:Null}"  
+                        BorderBrush="{x:Null}"
+                        Click="tbnAccessories_Click"
+                        Margin="0 10"
+                        Style="{StaticResource MyButtonStyleCategory}"
+                        >
+                        <WrapPanel Width="330">
+                            <Image Source="/Images/accessories.png" Height="35" Width="35"/>
+                            <TextBlock
+                                FontSize="22"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="Аксессуары и услуги"
+                                Margin="10" 
+                                Foreground="White" 
+                                Background="{x:Null}" 
+                                >
+                            </TextBlock>
+                        </WrapPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+        <Frame
+            x:Name="Catalog"
+            Grid.Column="1"
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            NavigationUIVisibility="Hidden"
+        />
+
+    </Grid>
+</Window>

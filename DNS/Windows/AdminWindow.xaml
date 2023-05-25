@@ -1,0 +1,123 @@
+﻿<Window x:Class="DNS.Windows.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DNS.Windows"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        ResizeMode="CanResize" Height="1080" Width="1920"
+        Title="AdminWindow">
+    <Grid Background="#e6e6e6" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.2*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <Border
+            Grid.Column="0"
+            Grid.Row="0"
+            Grid.ColumnSpan="2" Background="White">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.2*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Button
+                    x:Name="btnAllProduct"
+                    Height="80"
+                    Width="400"
+                    VerticalAlignment="Center"
+                    Content="Gray's shop"
+                    FontSize="50"
+                    HorizontalAlignment="Center"
+                    Foreground="White" 
+                    FontFamily="Segoe UI Semibold" 
+                    Background="{x:Null}" 
+                    BorderBrush="{x:Null}"
+                    Style="{StaticResource MyButtonStyleCategory}" 
+                    />
+
+            </Grid>
+        </Border>
+        <Border
+            Grid.Column="0"
+            Grid.Row="1"
+            Background="White"
+            CornerRadius="20"
+            Height="840"
+            Width="400" Margin="0 10 0 0"
+            >
+            <Grid Margin="5 0 5 10">
+
+                <StackPanel 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Top"
+                    Width="370">
+
+                    <Button 
+                        Height="55"
+                        Grid.Column="1"
+                        x:Name="btnAllProd"
+                        Background="{x:Null}"  
+                        BorderBrush="{x:Null}"
+                        Margin="0 10"
+                        Click="btnAllProduct_Click"
+                        Style="{StaticResource MyButtonStyleCategory}"
+                        >
+                        <TextBlock
+                                FontSize="22"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="Товары"
+                                Margin="10" 
+                                Foreground="White" 
+                                Background="{x:Null}" 
+                                >
+
+                        </TextBlock>
+                    </Button>
+                    <Button 
+                        Height="55"
+                        Grid.Column="1"
+                        x:Name="btnEmploe"
+                        Background="{x:Null}"  
+                        BorderBrush="{x:Null}"
+                        Margin="0 10"
+                        Click="btnEmploe_Click"
+                        Style="{StaticResource MyButtonStyleCategory}"
+                        >
+                        <TextBlock
+                                FontSize="22"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="Сотрудник"
+                                Margin="10" 
+                                Foreground="White" 
+                                Background="{x:Null}" 
+                                >
+
+                        </TextBlock>
+                    </Button>
+
+                </StackPanel>
+
+            </Grid>
+            
+        </Border>
+
+        <Frame
+            x:Name="Catalog"
+            Grid.Column="1"
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            NavigationUIVisibility="Hidden"
+        />
+
+    </Grid>
+</Window>

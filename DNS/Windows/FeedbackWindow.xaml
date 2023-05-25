@@ -1,0 +1,25 @@
+﻿<Window x:Class="DNS.Windows.FeedbackWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DNS.Windows"
+        mc:Ignorable="d"
+        Title="FeedbackWindow" WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Height="750" Width="600"
+        Background="Transparent" 
+        AllowsTransparency="True">
+    <Border 
+        CornerRadius="20" 
+        Background="White"
+        BorderBrush="#FF8D9292" 
+        BorderThickness="2">
+        <Grid>
+            
+            
+        </Grid>
+
+    </Border>
+</Window>

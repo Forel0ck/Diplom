@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9736bd2233a047a1826601435e4481a0" Name="Diagram1">
+        <EntityTypeShape EntityType="DNSModel.Position" Width="1.5" PointX="3.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DNSModel.PostionEmployee" Width="1.5" PointX="6" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DNSModel.vw_Category" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DNSModel.vw_ClientOrder" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DNSModel.vw_OrderProduct" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DNSModel.vw_Post" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="DNSModel.FK_PostionEmployee_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="DNSModel.FK_PostionEmployee_Position" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DNSModel.Category" Width="1.5" PointX="0.75" PointY="2.875" />
+        <EntityTypeShape EntityType="DNSModel.Client" Width="1.5" PointX="0.75" PointY="7" />
+        <EntityTypeShape EntityType="DNSModel.Employee" Width="1.5" PointX="3.75" PointY="13.25" />
+        <EntityTypeShape EntityType="DNSModel.Gender" Width="1.5" PointX="1.5" PointY="14.875" />
+        <EntityTypeShape EntityType="DNSModel.Order" Width="1.5" PointX="3" PointY="7.5" />
+        <EntityTypeShape EntityType="DNSModel.OrderProduct" Width="1.5" PointX="5.25" PointY="2.375" />
+        <EntityTypeShape EntityType="DNSModel.OrderStatus" Width="1.5" PointX="5.25" PointY="9.5" />
+        <EntityTypeShape EntityType="DNSModel.Product" Width="1.5" PointX="3" PointY="1.875" />
+        <EntityTypeShape EntityType="DNSModel.Review" Width="1.5" PointX="7.5" PointY="2.5" />
+        <EntityTypeShape EntityType="DNSModel.Role" Width="1.5" PointX="1.5" PointY="11.75" />
+        <EntityTypeShape EntityType="DNSModel.SecondPhoto" Width="1.5" PointX="5.25" PointY="6" />
+        <EntityTypeShape EntityType="DNSModel.Status" Width="1.5" PointX="3" PointY="18.875" />
+        <EntityTypeShape EntityType="DNSModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="5.75" />
+        <AssociationConnector Association="DNSModel.FK_Product_Category" />
+        <AssociationConnector Association="DNSModel.FK_Client_Role" />
+        <AssociationConnector Association="DNSModel.FK_Order_Client" />
+        <AssociationConnector Association="DNSModel.FK_Employee_Gender" />
+        <AssociationConnector Association="DNSModel.FK_Employee_Role" />
+        <AssociationConnector Association="DNSModel.FK_OrderProduct_Order" />
+        <AssociationConnector Association="DNSModel.FK_OrderStatus_Order" />
+        <AssociationConnector Association="DNSModel.FK_OrderProduct_Product" />
+        <AssociationConnector Association="DNSModel.FK_Review_OrderProduct" />
+        <AssociationConnector Association="DNSModel.FK_OrderStatus_Status" />
+        <AssociationConnector Association="DNSModel.FK_SecondPhoto_Product" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

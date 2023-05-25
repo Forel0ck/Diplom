@@ -1,0 +1,108 @@
+﻿<Window x:Class="DNS.Windows.PayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DNS.Windows"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Height="500" Width="400"
+        Background="Transparent" 
+        AllowsTransparency="True"
+        Title="PayWindow">
+    <Border 
+        CornerRadius="20" 
+        Background="White"
+        BorderBrush="#FF8D9292" 
+        BorderThickness="2">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Text="Выбор оплаты"
+                FontSize="40"
+                TextAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="20"
+                TextWrapping="Wrap" 
+                FontFamily="Segoe UI Semibold"
+                />
+            <Button
+                x:Name="btnClose"
+                Grid.Row="0"
+                Grid.Column="1"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Margin="10 20" 
+                BorderBrush="{x:Null}" 
+                Foreground="{x:Null}"
+                Height="25"
+                Width="25" 
+                Click="btnClose_Click"
+                Style="{StaticResource MyButtonStyle}"
+                >
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/close.png"/>
+                </Button.Background>
+            </Button>
+            
+            <Button
+                Grid.Row="1"
+                Grid.Column="0"
+                x:Name="btnCart"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Style="{StaticResource MyButtonStyle}" 
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="{x:Null}"
+                Click="btnCart_Click">
+                <StackPanel>
+                    <Image Source="/Images/iconscard.png" Height="100" Width="100"/>
+                    <TextBlock
+                                    Margin="5"
+                                    Text="Карта"
+                                    FontSize="24"
+                                    HorizontalAlignment="Center" 
+                                    Foreground="Black"/>
+                </StackPanel>
+            </Button>
+            <Button
+                Grid.Row="1"
+                Grid.Column="1"
+                x:Name="btnMoney"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Style="{StaticResource MyButtonStyle}" 
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="{x:Null}"
+                Click="btnMoney_Click">
+                <StackPanel>
+                    <Image Source="/Images/iconscash.png"  Width="100" Height="100"/>
+                    <TextBlock
+                                    Margin="5"
+                                    Text="Наличные"
+                                    FontSize="24"
+                                    HorizontalAlignment="Center" 
+                                    Foreground="Black"/>
+                </StackPanel>
+            </Button>
+            
+
+        </Grid>
+        </Border>
+</Window>

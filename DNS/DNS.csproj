@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7D80030-B420-41DF-B480-1AA6577B6139}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DNS</RootNamespace>
+    <AssemblyName>DNS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BD\BD.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\BD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\BD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Category.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Client.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\CostProduct_Result.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Employee.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Gender.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\MediumCostProduct_Result.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Order.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\OrderProduct.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\OrderStatus.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Post.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Product.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\PR_OrderProduct_Result.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Review.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Role.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\SecondPhoto.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\sp_helpdiagrams_Result.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Status.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\sysdiagrams.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\vw_Category.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\vw_ClientOrder.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\vw_OrderProduct.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\vw_Post.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\BasketClass.cs" />
+    <Compile Include="Classes\ContClass.cs" />
+    <Compile Include="Classes\PersonnelDate.cs" />
+    <Compile Include="Classes\ProductClass.cs" />
+    <Compile Include="Pages\Employee.xaml.cs">
+      <DependentUpon>Employee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AddEmployee.xaml.cs">
+      <DependentUpon>AddEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AddProduct.xaml.cs">
+      <DependentUpon>AddProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\FeedbackWindow.xaml.cs">
+      <DependentUpon>FeedbackWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ManegerWindow.xaml.cs">
+      <DependentUpon>ManegerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\OrderWindow.xaml.cs">
+      <DependentUpon>OrderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PayWindow.xaml.cs">
+      <DependentUpon>PayWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\test.xaml.cs">
+      <DependentUpon>test.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Pages\Accessories.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AllProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Appliances.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Beautyandhealth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Employee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\NetworkEquipment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Officeandfurniture.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PCAccessories.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PCs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Smartphones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Tools.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Authorization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\FeedbackWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\ClassEntities.cs" />
+    <Compile Include="Pages\Accessories.xaml.cs">
+      <DependentUpon>Accessories.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AllProduct.xaml.cs">
+      <DependentUpon>AllProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Appliances.xaml.cs">
+      <DependentUpon>Appliances.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Beautyandhealth.xaml.cs">
+      <DependentUpon>Beautyandhealth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NetworkEquipment.xaml.cs">
+      <DependentUpon>NetworkEquipment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Officeandfurniture.xaml.cs">
+      <DependentUpon>Officeandfurniture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PCAccessories.xaml.cs">
+      <DependentUpon>PCAccessories.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PCs.xaml.cs">
+      <DependentUpon>PCs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Smartphones.xaml.cs">
+      <DependentUpon>Smartphones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tools.xaml.cs">
+      <DependentUpon>Tools.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TV.xaml.cs">
+      <DependentUpon>TV.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Authorization.xaml.cs">
+      <DependentUpon>Authorization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Windows\ManegerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\OrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\PayWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\test.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="BD\BD.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BD.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BD\BD.edmx.diagram">
+      <DependentUpon>BD.edmx</DependentUpon>
+    </None>
+    <None Include="ImgEmployee\i.webp" />
+    <None Include="ImgEmployee\i10.webp" />
+    <None Include="ImgEmployee\i2.webp" />
+    <None Include="ImgEmployee\i3.webp" />
+    <None Include="ImgEmployee\i4.webp" />
+    <None Include="ImgEmployee\i5.webp" />
+    <None Include="ImgEmployee\i6.webp" />
+    <None Include="ImgEmployee\i7.webp" />
+    <None Include="ImgEmployee\i8.webp" />
+    <None Include="ImgEmployee\i9.webp" />
+    <None Include="ImgProduct\0445ba4939edf930e673d593f4cf9fb2ead4724139bba6fb6bccf0702ea948e3.jpg.webp" />
+    <None Include="ImgProduct\095b1ce49336291249c6db12e7b859ead737aadb6589c102712116c2d47337fa.png.webp" />
+    <None Include="ImgProduct\114daee481fcf626a6d0f76b4ec295582aee115e2038e20b76411315107f94f1.jpg.webp" />
+    <None Include="ImgProduct\133f62ed3b11a0e88abb95b6e3fd3229630212be9379b846d3e5a2790caa88cf.jpg.webp" />
+    <None Include="ImgProduct\1d4c2fe343cb18a91807a630fa668f617da3d850805b1f092cade0160dde4025.jpg.webp" />
+    <None Include="ImgProduct\1e6f8118ca8fb6363d527e9b15d8ce3ed412dd0b6d600abe84668141fda3bd0e.jpg.webp" />
+    <None Include="ImgProduct\200e4a08e74afcc3cf1d54d47b758cbbf14c71973a64009553347d2b234b5af4.jpg.webp" />
+    <None Include="ImgProduct\210a8b46bc4960afc43f50a983cd24e1bf1f7f3ebe8935ece300fed0a3d81285.jpg.webp" />
+    <None Include="ImgProduct\2184cfe006ae43ce05cb0c14055c98f54943ef0dd9be25c7586ad0eaf7777948.jpg.webp" />
+    <None Include="ImgProduct\2505f341f55442383db77c36a316a3d5e634b64a3e22f0a19ff860e16c1a3927.jpg.webp" />
+    <None Include="ImgProduct\26efb9ebb2001548460abf616ccd0ec3c35c82b0a8e499281556a3222fce56c0.jpg.webp" />
+    <None Include="ImgProduct\28759006218d7336b5b1e4b527f69ecc2a7b14cfa5f035f49c12a555f1b6c60a.jpg.webp" />
+    <None Include="ImgProduct\3681b8c3f5ce7fb39358838f4aaaa2d9a43f0d2ceb7e5d2143d060240ae6fb53.jpg.webp" />
+    <None Include="ImgProduct\3dfaf5268b34aa2398a14e8906fb3d7720f5f945551ccd244419f29363db48f1.jpg.webp" />
+    <None Include="ImgProduct\42fbcbdd510546b10bcb8ade04eeaa7adaeb31c9297a725d0f50d8a5a2441f90.jpg.webp" />
+    <None Include="ImgProduct\4a244afcd04beef954ebb7b2bbb8bba36cda384f075c2414062849534a337ef5.jpg.webp" />
+    <None Include="ImgProduct\54c89bc711db93b812132e291c31a199dcbd5c48ae1a471f0f51a0560615b6a8.jpg.webp" />
+    <None Include="ImgProduct\693304be4ab54090fcfa156f79c721ecf67dd0a6c1c6eaa55adc4ab35ec2c0bd.jpg.webp" />
+    <None Include="ImgProduct\6d0d949a21ef0b520ca4acdfe11794916d3f5680f24623934932663f90a30b7e.jpg.webp" />
+    <None Include="ImgProduct\6e34530f5086f5cbb0ceade6660ae3add5e93d075fc2a2b20f9c5faab3ce9109.jpg.webp" />
+    <None Include="ImgProduct\76309d8f501f54773cc06041eb6bc919edf9a1e1d97930d9383051c3908e9847.jpg.webp" />
+    <None Include="ImgProduct\775796e0ada46610ea374786e76b15616b360607131dc6d61d83e0a00c88aa82.jpg.webp" />
+    <None Include="ImgProduct\78c2737bd0f85d00bc4d9b007ffa4cea5f5c08e3ebf23c3a5fe8db68faf64a17.jpg.webp" />
+    <None Include="ImgProduct\7c336574d48617df819d0742117f4dbb4cf95e75fae01cbc0e5fcac9fa9bb3e0.jpg.webp" />
+    <None Include="ImgProduct\7c80865de448b9054d6bd5b08dc25df8674ff369065f8a8ce2fc392625bd0ea6.jpg.webp" />
+    <None Include="ImgProduct\7d5bd9ea63a340c9667cdf1c133bb586d8168235a62de573ac90e8f3eb078ea7.jpg.webp" />
+    <None Include="ImgProduct\7fd640a0becff386de38fd4d8aaceaf9ac067d03a15fe30d4d15417468f29d94.jpg.webp" />
+    <None Include="ImgProduct\85dd66e7d18a57bad395fd26568fb347e09599066bbebb583bb57eb1c14c0f20.jpg.webp" />
+    <None Include="ImgProduct\8ddd8b1a120f45f95c130bdbee523fa4944aea771c515760ccd9c39759b444c3.jpg.webp" />
+    <None Include="ImgProduct\8e2cdb5eac8e4862679de51b7199a7c10468f1f2dcbda67b8d7f298c4a74b373.jpg.webp" />
+    <None Include="ImgProduct\9080463adf1f65ff290f6db6bfa78a83143b991ca1bda30f0a93b67027c39e43.jpg.webp" />
+    <None Include="ImgProduct\92f5cbbe76cbccb59e28290a71366bae0581ff7ea0ece9b90426275db520108a.jpg.webp" />
+    <None Include="ImgProduct\96dd75cbbfd3f45b4768d43cf8285c29fcf506a18e5fff73e8cc602a40090e50.jpg.webp" />
+    <None Include="ImgProduct\97c5cac2aabbc83a09317e4d7677d6d626118dbf0370881c9229fb2fc494644e.jpg.webp" />
+    <None Include="ImgProduct\9800be9bda7209861f55b485c57a434fc5dc9e06f38ca6fc2f3095ed11c2b5bd.jpg.webp" />
+    <None Include="ImgProduct\9998bfce9f6200df18a89f840d6dcbbb48f8f83ffc2c248935fd4a9c97cac456.jpg.webp" />
+    <None Include="ImgProduct\a56e8426287f4d04677763a20242a878efaa5aa1c775f0d7bff728ea2e1a5d8f.jpg.webp" />
+    <None Include="ImgProduct\a72d3c85d832b4f67f9623cc62b37c408e0e8167f5899ec66b994600bb742674.jpg.webp" />
+    <None Include="ImgProduct\b28159e5f3f3c7125b0550ab62016ada387472728e74829b5fa1c23a94e34e8d.jpg.webp" />
+    <None Include="ImgProduct\b5ac31867a4d4b6f5f3ac0b9b9e6f20d53b1e791fa5de34ee22b4003b27c6d86.jpg.webp" />
+    <None Include="ImgProduct\b78e26ef705c1ee07602e74dc2ab8bbca765ea6292966ed3d4dde73a37bb2b41.jpg.webp" />
+    <None Include="ImgProduct\b83dd05bb9ededc17ef81e54ab861a98556e22f7f303e8c69d78a7bacb61a16c.jpg.webp" />
+    <None Include="ImgProduct\c739352b8b49147a2ce274882e8f84665773dbed2887d38740ded651aa7be928.jpg.webp" />
+    <None Include="ImgProduct\cf3008bc2b3dd6485531e46b2367a788938179f0189f639039529fe764eab3ff.jpg.webp" />
+    <None Include="ImgProduct\da7f2d79130bda6d1fc595b4607d3a2c03dd18add9a584da903c804585912f4e.jpg.webp" />
+    <None Include="ImgProduct\daedf47b46d6a54b64ab0fb4c5426bbc4b24bf0f644d72dcec8b24bd6fa5ea5f.jpg.webp" />
+    <None Include="ImgProduct\dda903b748300503eba70916887766891ccca47344ebd7919b03927419fc4f98.jpg.webp" />
+    <None Include="ImgProduct\e1fdb832d88fab22e59834da35ddf1c577eda65b358bb4c2d01920e3f210f448.jpg.webp" />
+    <None Include="ImgProduct\e477e92b33fbd715322f0613cf783fb98d6fd6e141a04e982cffd456402af0f2.jpg.webp" />
+    <None Include="ImgProduct\f1a7454a04a7b20f04788cbe3670395adb0587515f284063340356ea994cfa76.jpg.webp" />
+    <None Include="ImgProduct\f24c4e0974c612066d87a6193717fc3162708d0b9e790802f32fc134464a4aea.jpg.webp" />
+    <None Include="ImgProduct\f562d5d7c5aded9062b33c2f7f46ca625e7391fc96aeda3e27f56955a0906641.jpg.webp" />
+    <None Include="ImgProduct\f92bae6e1051391b53a9d7d894213607a84ab54fb27d4bcdf9a991b28d38d6e1.jpg.webp" />
+    <None Include="ImgProduct\feca60a4d3a1f2354132091568b80e89438adea19e16c8b9ae61b180c26199c6.jpg.webp" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icon_cart.png" />
+    <Resource Include="Images\icon_profilecircled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icon_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\vector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\fen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\smart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\tv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\proc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\wf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\tool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\accessories.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BD\BD.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BD.edmx</DependentUpon>
+      <LastGenOutput>BD.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BD\BD.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BD.edmx</DependentUpon>
+      <LastGenOutput>BD.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Images\iconscash.png" />
+    <Resource Include="Images\iconscard.png" />
+    <Resource Include="Images\Minus.png" />
+    <Resource Include="Images\Plus.png" />
+    <Resource Include="ImgProduct\17375b06990b7205e8345790205729cbef28e859ee27de2e5b287a719b8c1440.png.png" />
+    <Resource Include="Images\icon-bo.png" />
+    <Resource Include="Images\noun_profile.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
